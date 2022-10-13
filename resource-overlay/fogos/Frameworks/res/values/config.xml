@@ -299,6 +299,20 @@
         <item>15</item>
     </array>
 
+    <!-- Applications which are disabled unless matching a particular sku -->
+    <string-array name="config_disableApksUnlessMatchedSku_apk_list" translatable="false">
+        <item>com.android.nfc</item>
+        <item>com.android.se</item>
+        <item>com.android.apps.tag</item>
+        <item>com.google.android.tag</item>
+    </string-array>
+
+    <string-array name="config_disableApkUnlessMatchedSku_skus_list" translatable="false">
+        <item>XT2363-1</item>
+        <item>XT2363-2</item>
+        <item>XT2363-3</item>
+    </string-array>
+
     <!-- ComponentName of a dream to show whenever the system would otherwise have
          gone to sleep.  When the PowerManager is asked to go to sleep, it will instead
          try to start this dream if possible.  The dream should typically call startDozing()
