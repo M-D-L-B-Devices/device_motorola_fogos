@@ -108,3 +108,6 @@
 /sys/devices/virtual/input/input[0-9]+/wakeup[0-9]+(/.*)?                                 u:object_r:sysfs_wakeup:s0
 /sys/devices/platform/soc/[^*]+/wakeup/wakeup[0-9]+(/.*)?                                 u:object_r:sysfs_wakeup:s0
 /sys/devices/virtual/misc/[^*]+/wakeup[0-9]+(/.*)?                                        u:object_r:sysfs_wakeup:s0
+
+# Init
+/vendor/bin/init.blair.post_boot.sh          u:object_r:vendor_qti_init_shell_exec:s0
