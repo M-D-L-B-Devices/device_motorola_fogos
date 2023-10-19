@@ -388,6 +388,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     system/core/libprocessgroup/profiles/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
 
+# Preopt SystemUI
+PRODUCT_DEXPREOPT_SPEED_APPS += SystemUIGoogle
+
 # QMI
 PRODUCT_PACKAGES += \
     libjson \
