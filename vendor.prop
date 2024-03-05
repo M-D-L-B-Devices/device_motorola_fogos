@@ -138,6 +138,7 @@ persist.vendor.qcom.bluetooth.scram.enabled=false
 persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=false
 ro.bluetooth.a2dp_offload.supported=true
 ro.vendor.bluetooth.wipower=false
+persist.vendor.qcom.bluetooth.soc=cherokee
 vendor.qcom.bluetooth.soc=hastings
 
 # Camera
@@ -240,7 +241,7 @@ ro.mot.build.customerid=global
 
 # NFC
 ro.nfc.port=I2C
-ro.vendor.hw.nfc=st
+persist.vendor.nfc.config_secfile_name=libnfc-sec-nci.conf
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
