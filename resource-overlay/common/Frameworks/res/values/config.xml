@@ -222,6 +222,8 @@
         <item>"evdo:4094,87380,524288,4096,16384,262144"</item>
     </string-array>
 
+    <!-- Auto-brightness sensor type string -->
+    <string name="config_displayLightSensorType">"android.sensor.light"</string>
 
     <!--  Maximum number of supported users -->
     <integer name="config_multiuserMaximumUsers">4</integer>

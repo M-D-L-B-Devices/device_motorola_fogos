@@ -138,6 +138,7 @@ persist.vendor.qcom.bluetooth.scram.enabled=false
 persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=false
 ro.bluetooth.a2dp_offload.supported=true
 ro.vendor.bluetooth.wipower=false
+persist.vendor.qcom.bluetooth.soc=cherokee
 vendor.qcom.bluetooth.soc=hastings
 
 # Camera
