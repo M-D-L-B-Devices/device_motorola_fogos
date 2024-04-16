@@ -49,7 +49,6 @@ vendor/lib/rfsa/adsp/libdsp_streamer_binning.so
 vendor/lib/rfsa/adsp/libfastcvadsp.so
 vendor/lib/rfsa/adsp/libfastcvdsp_skel.so
 vendor/lib/rfsa/adsp/libhdr_skel.so
-vendor/lib/rfsa/adsp/libhexagon_nn_skel.so
 vendor/lib/rfsa/adsp/libmctfengine_skel.so
 vendor/lib/rfsa/adsp/libneat_1_1_skel.so
 vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so
@@ -160,11 +159,12 @@ vendor/lib64/com.qualcomm.mcx.policy.mfl.so
 vendor/lib64/com.qualcomm.qti.mcx.usecase.extension.so
 vendor/lib64/libaidenoiser.so
 vendor/lib64/libaidenoiserv2.so
-vendor/lib64/libarcsoft_dual_sat.so
-vendor/lib64/libarcsoft_dual_zoomtranslator.so
 vendor/lib64/libbitmlengine.so
 vendor/lib64/libbitmlenginev2.so
-vendor/lib64/libBSTSWAD.so
+vendor/lib64/libBST3DDNS.so
+vendor/lib64/libBSTHDRDETECT.so
+vendor/lib64/libBSTMultiExpoGainHDR.so
+vendor/lib64/libBSTNodeUtils.so
 vendor/lib64/libcamera_nn_stub.so
 vendor/lib64/libcamerapostproc.so
 vendor/lib64/libcamxexternalformatutils.so
@@ -180,7 +180,6 @@ vendor/lib64/libcamxswprocessalgo.so
 vendor/lib64/libcamxtintlessalgo.so
 vendor/lib64/libchilog.so
 vendor/lib64/libcom.qti.chinodeutils.so
-vendor/lib64/libfcell.so
 vendor/lib64/libipebpsstriping.so
 vendor/lib64/libipebpsstriping170.so
 vendor/lib64/libjpege.so
@@ -198,8 +197,6 @@ vendor/lib64/libmmcamera_pdpc.so
 vendor/lib64/libmot_afd.so
 vendor/lib64/libmotohid.so
 vendor/lib64/libmpbase.so
-vendor/lib64/libmulticam_optical_zoom_control.so
-vendor/lib64/libmulticam_video_optical_zoom.so
 vendor/lib64/libofflinedump.so
 vendor/lib64/libofflinelog.so
 vendor/lib64/libopencv.so
@@ -216,19 +213,14 @@ vendor/lib64/libthreadutils.so
 vendor/lib64/libundistort_impl.so
 vendor/lib64/libvideooptfeature.so
 vendor/lib64/libvidhance.so
-vendor/lib64/libvidhance_active_ois.so
-vendor/lib64/libvidhance_dmbr.so
-vendor/lib64/libvidhance_face_stabilizer.so
-vendor/lib64/libvidhance_fbc.so
-vendor/lib64/libvidhance_horizon_correction.so
-vendor/lib64/libvidhance_stabilizer.so
-vendor/lib64/libvidhance_zoom_stabilization.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
 
 # Camera - Components
-vendor/lib64/camera/components/com.arcsoft.node.smooth_transition.so
-vendor/lib64/camera/components/com.mot.node.dc_capture.so
-vendor/lib64/camera/components/com.mot.node.dc_preview.so
+vendor/lib64/camera/components/com.arcsoft.node.supernightraw.so
+vendor/lib64/camera/components/com.bst.node.hdrdetect.so
+vendor/lib64/camera/components/com.bst.node.mfnr.so
+vendor/lib64/camera/components/com.bst.node.yuvhdr.so
+vendor/lib64/camera/components/com.mot.node.c2d.so
 vendor/lib64/camera/components/com.qti.camx.chiiqutils.so
 vendor/lib64/camera/components/com.qti.eisv2.so
 vendor/lib64/camera/components/com.qti.eisv3.so
@@ -278,7 +270,6 @@ vendor/lib64/camera/components/com.qtistatic.stats.awb.so
 vendor/lib64/camera/components/com.qtistatic.stats.pdlib.so
 vendor/lib64/camera/components/com.vidhance.node.ica.so
 vendor/lib64/camera/components/com.vidhance.node.processing.so
-vendor/lib64/camera/components/com.vidhance.stats.aec_dmbr.so
 vendor/lib64/camera/components/libdepthmapwrapper_secure.so
 
 # Camera - eeprom
@@ -288,12 +279,12 @@ vendor/lib/camera/com.mot.eeprom.mot_gt24p64b_s5k3p9_eeprom.so
 vendor/lib/camera/com.mot.eeprom.mot_sc202acs_otp.so
 
 # Camera - etc
-vendor/etc/camera/SwadAIMod.bin
-vendor/etc/camera/SwadCalib.bin
-vendor/etc/camera/SwadParamList.txt
-vendor/etc/camera/aec_golden_wide.bin
-vendor/etc/camera/dual_golden_wide.bin
+vendor/etc/camera/anc_detect_model
+vendor/etc/camera/anc_track_model
+vendor/etc/camera/mot_engine_config.bin
+vendor/etc/camera/vidhance.lic
 vendor/etc/camera/vidhance_calibration
+vendor/etc/camera/vidhance_calibration_2rd
 
 # Camera - feature2
 vendor/lib64/com.qti.feature2.anchorsync.so
@@ -762,7 +753,6 @@ vendor/lib64/libkeymasterutils.so
 vendor/lib64/libqtikeymaster4.so
 
 # Listen
-vendor/lib/libadpcmdec.so
 vendor/lib/libcapiv2svacnn.so
 vendor/lib/libcapiv2svarnn.so
 vendor/lib/libcapiv2vop.so
