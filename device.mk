@@ -13,12 +13,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Installs gsi keys into ramdisk, to boot a GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
+# Inherit virtual_ab_ota product
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 
 # Screen
-TARGET_SCREEN_DENSITY := 420
+TARGET_SCREEN_DENSITY := 280
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
@@ -45,10 +48,10 @@ PRODUCT_PACKAGES += \
     WifiResTarget
 
 PRODUCT_PACKAGES += \
-    FrameworksResCorfur \
-    LineageSystemUICorfur \
-    SettingsProviderResCorfur \
-    SystemUIResCorfur
+    FrameworksResFogos \
+    LineageSystemUIFogos \
+    SettingsProviderResFogos \
+    SystemUIResFogos
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
@@ -501,4 +504,4 @@ PRODUCT_BOOT_JARS += \
     WfdCommon
 
 # Inherit from vendor blobs
-$(call inherit-product, vendor/motorola/corfur/corfur-vendor.mk)
+$(call inherit-product, vendor/motorola/fogos/fogos-vendor.mk)

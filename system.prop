@@ -28,7 +28,7 @@ persist.data.df.ul_mode=5
 persist.vendor.dpm.feature=11
 
 # Google
-ro.opa.device_model_id=motorola-corfur
+ro.opa.device_model_id=motorola-fogos
 ro.opa.eligible_device=true
 
 # HWUI

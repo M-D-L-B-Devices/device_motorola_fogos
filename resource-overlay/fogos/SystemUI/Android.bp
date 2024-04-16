@@ -1,5 +1,5 @@
 runtime_resource_overlay {
-    name: "SystemUIResCorfur",
+    name: "SystemUIResFogos",
     sdk_version: "current",
     vendor: true
 }

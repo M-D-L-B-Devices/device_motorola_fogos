@@ -6,7 +6,7 @@
 
 BOARD_VENDOR := motorola
 
-DEVICE_PATH := device/motorola/corfur
+DEVICE_PATH := device/motorola/fogos
 
 # Architecture
 TARGET_ARCH := arm64
@@ -24,7 +24,7 @@ TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := kryo385
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := corfur
+TARGET_BOOTLOADER_BOARD_NAME := fogos
 TARGET_NO_BOOTLOADER := true
 
 # Build
@@ -43,7 +43,7 @@ BOARD_KERNEL_CMDLINE += swiotlb=0 loop.max_part=7 cgroup.memory=nokmem,nosocket
 BOARD_KERNEL_CMDLINE += pcie_ports=compat loop.max_part=7 iptable_raw.raw_before_defrag=1
 BOARD_KERNEL_CMDLINE += ip6table_raw.raw_before_defrag=1 androidboot.hab.csv=8
 BOARD_KERNEL_CMDLINE += androidboot.hab.cid=50
-BOARD_KERNEL_CMDLINE += androidboot.hab.product=corfur
+BOARD_KERNEL_CMDLINE += androidboot.hab.product=fogos
 BOARD_KERNEL_CMDLINE += firmware_class.path=/vendor/firmware_mnt/image
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_IMAGE_NAME := Image
@@ -196,7 +196,7 @@ TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery/recovery.wipe
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Security
-VENDOR_SECURITY_PATCH := 2023-09-01
+VENDOR_SECURITY_PATCH := 2023-12-01
 
 # SELinux
 include device/qcom/sepolicy_vndr/SEPolicy.mk
@@ -231,4 +231,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # inherit from the proprietary version
-include vendor/motorola/corfur/BoardConfigVendor.mk
+include vendor/motorola/fogos/BoardConfigVendor.mk

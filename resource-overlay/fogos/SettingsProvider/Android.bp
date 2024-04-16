@@ -1,5 +1,5 @@
 runtime_resource_overlay {
-    name: "SettingsProviderResCorfur",
+    name: "SettingsProviderResFogos",
     sdk_version: "current",
     vendor: true
 }
