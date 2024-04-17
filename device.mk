@@ -118,20 +118,19 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     libreverbwrapper \
     libvisualizer \
-    sound_trigger.primary.holi
-
-#    libaudioroute \
-#    libbatterylistener \
-#    libcirrusspkrprot \
-#    libcomprcapture \
-#    libexthwplugin \
-#    libhdmiedid \
-#    libhfp \
-#    libqcompostprocbundle \
-#    libsndmonitor \
-#    libspkrprot \
-#    libtinycompress \
-#    libvolumelistener \
+    sound_trigger.primary.holi \
+    libaudioroute \
+    libbatterylistener \
+    libcirrusspkrprot \
+    libcomprcapture \
+    libexthwplugin \
+    libhdmiedid \
+    libhfp \
+    libqcompostprocbundle \
+    libsndmonitor \
+    libspkrprot \
+    libtinycompress \
+    libvolumelistener
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
@@ -311,13 +310,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcodec2_hidl@1.0.vendor \
     libcodec2_vndk.vendor \
+    libmm-omxcore \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxCore \
     libOmxEvrcEnc \
     libOmxG711Enc \
     libOmxQcelp13Enc \
-    libstagefrighthw
+    libstagefrighthw \
+    libstagefright_softomx.vendor
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false

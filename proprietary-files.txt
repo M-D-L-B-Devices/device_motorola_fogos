@@ -183,6 +183,13 @@ vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/libipebpsstriping.so
 vendor/lib64/libipebpsstriping170.so
 vendor/lib64/libjpege.so
+vendor/lib64/libarcsoft_chi_utils.so
+vendor/lib64/libarcsoft_portrait_super_night_se_raw.so
+vendor/lib64/libarcsoft_super_night_raw.so
+vendor/lib64/libarcsoft_super_night_se_raw.so
+vendor/lib64/libportrait_repair_ppl3_ocl.so
+vendor/lib64/libmot_chi_desktop_helper.so
+vendor/lib64/libmot_engine_settings.so
 vendor/lib64/liblowlight_ai_portrait.arcsoft.so
 vendor/lib64/libmctfengine_stub.so
 vendor/lib64/libmfec.so
@@ -212,6 +219,8 @@ vendor/lib64/libtfestriping.so
 vendor/lib64/libthreadutils.so
 vendor/lib64/libvidhance.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
+vendor/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so
+vendor/lib64/vendor.qti.hardware.scve.panorama@1.0.so
 
 # Camera - Components
 vendor/lib64/camera/components/com.arcsoft.node.supernightraw.so
@@ -271,10 +280,10 @@ vendor/lib64/camera/components/com.vidhance.node.processing.so
 vendor/lib64/camera/components/libdepthmapwrapper_secure.so
 
 # Camera - eeprom
-vendor/lib/camera/com.mot.eeprom.mot_gt24p256c_s5kjns_eeprom.so
-vendor/lib/camera/com.mot.eeprom.mot_gt24p64b_ov16a1q_eeprom.so
-vendor/lib/camera/com.mot.eeprom.mot_gt24p64b_s5k3p9_eeprom.so
-vendor/lib/camera/com.mot.eeprom.mot_sc202acs_otp.so
+vendor/lib64/camera/com.mot.eeprom.mot_gt24p256c_s5kjns_eeprom.so
+vendor/lib64/camera/com.mot.eeprom.mot_gt24p64b_ov16a1q_eeprom.so
+vendor/lib64/camera/com.mot.eeprom.mot_gt24p64b_s5k3p9_eeprom.so
+vendor/lib64/camera/com.mot.eeprom.mot_sc202acs_otp.so
 
 # Camera - etc
 vendor/etc/camera/anc_detect_model
@@ -286,6 +295,7 @@ vendor/etc/camera/vidhance_calibration_2rd
 
 # Camera - feature2
 vendor/lib64/com.qti.feature2.anchorsync.so
+vendor/lib64/com.qti.feature2.arcrawpro.so
 vendor/lib64/com.qti.feature2.demux.so
 vendor/lib64/com.qti.feature2.frameselect.so
 vendor/lib64/com.qti.feature2.fusion.so
@@ -311,23 +321,23 @@ vendor/lib64/com.qti.feature2.swmf.so
 #vendor/lib64/motorola.hardware.camera.desktop@2.0.so
 
 # Camera - sensor
-vendor/lib/camera/com.qti.flash.aw36514.so
-vendor/lib/camera/com.qti.flash.ocp81375.so
-vendor/lib/camera/com.qti.sensor.mot_ov16a1q.so
-vendor/lib/camera/com.qti.sensor.mot_s5k3p9.so
-vendor/lib/camera/com.qti.sensor.mot_s5kjns.so
-vendor/lib/camera/com.qti.sensor.mot_sc202acs.so
-vendor/lib/camera/com.qti.sensormodule.mot_fogor_s5kjns_qtech.bin
-vendor/lib/camera/com.qti.sensormodule.mot_fogor_sc202acs_sunny.bin
-vendor/lib/camera/com.qti.sensormodule.mot_fogos_ov16a1q_ofilm.bin
-vendor/lib/camera/com.qti.sensormodule.mot_fogos_s5k3p9_qtech.bin
+vendor/lib64/camera/com.qti.flash.aw36514.so
+vendor/lib64/camera/com.qti.flash.ocp81375.so
+vendor/lib64/camera/com.qti.sensor.mot_ov16a1q.so
+vendor/lib64/camera/com.qti.sensor.mot_s5k3p9.so
+vendor/lib64/camera/com.qti.sensor.mot_s5kjns.so
+vendor/lib64/camera/com.qti.sensor.mot_sc202acs.so
+vendor/lib64/camera/com.qti.sensormodule.mot_fogor_s5kjns_qtech.bin
+vendor/lib64/camera/com.qti.sensormodule.mot_fogor_sc202acs_sunny.bin
+vendor/lib64/camera/com.qti.sensormodule.mot_fogos_ov16a1q_ofilm.bin
+vendor/lib64/camera/com.qti.sensormodule.mot_fogos_s5k3p9_qtech.bin
 
 # Camera - tuned
-vendor/lib/camera/com.qti.tuned.default.bin
-vendor/lib/camera/com.qti.tuned.mot_fogo_sc202acs.bin
-vendor/lib/camera/com.qti.tuned.mot_fogor_s5kjns.bin
-vendor/lib/camera/com.qti.tuned.mot_fogos_ov16a1q.bin
-vendor/lib/camera/com.qti.tuned.mot_fogos_s5k3p9.bin
+vendor/lib64/camera/com.qti.tuned.default.bin
+vendor/lib64/camera/com.qti.tuned.mot_fogo_sc202acs.bin
+vendor/lib64/camera/com.qti.tuned.mot_fogor_s5kjns.bin
+vendor/lib64/camera/com.qti.tuned.mot_fogos_ov16a1q.bin
+vendor/lib64/camera/com.qti.tuned.mot_fogos_s5k3p9.bin
 
 # CDFW
 vendor/lib64/libcdfw.so
@@ -794,7 +804,20 @@ vendor/lib/libqcodec2_hooks.so
 vendor/lib/libqcodec2_platform.so
 vendor/lib/libqcodec2_utils.so
 vendor/lib/libqcodec2_v4l2codec.so
+vendor/lib64/libqcodec2_base.so
+vendor/lib64/libqcodec2_basecodec.so
+vendor/lib64/libqcodec2_core.so
+vendor/lib64/libqcodec2_hooks.so
+vendor/lib64/libqcodec2_mockfilter.so
+vendor/lib64/libqcodec2_platform.so
+vendor/lib64/libqcodec2_utils.so
+vendor/lib64/libqcodec2_v4l2codec.so
 vendor/lib64/libmmosal.so
+vendor/lib64/libcodec2_hidl@1.1.so
+vendor/lib64/libcodec2_soft_ac4dec.so
+vendor/lib64/libcodec2_soft_common.so
+vendor/lib64/libcodec2_soft_ddpdec.so
+vendor/lib64/libcodec2_store_dolby.so
 
 # Media - configs
 vendor/etc/media_codecs.xml
