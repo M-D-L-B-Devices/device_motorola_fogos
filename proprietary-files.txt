@@ -141,6 +141,10 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 vendor/lib64/vendor.qti.hardware.cacert@1.0.so
 
 # Camera
+vendor/etc/bst_3ddns_1.cfg
+vendor/etc/bst_3ddns_2.cfg
+vendor/etc/bst_3ddns_3.cfg
+vendor/etc/bstconfig/hdrcfg.cfg
 vendor/etc/pwr/PowerFeatureConfig.xml
 vendor/etc/pwr/VideoPowerOptFeature.xml
 vendor/lib/libcamxexternalformatutils.so
