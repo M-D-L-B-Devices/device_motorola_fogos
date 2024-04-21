@@ -1,4 +1,4 @@
-# Unpinned blobs from fogos_g-user 11 U1UG34.23-28-2 8dca85 release-keys
+y# Unpinned blobs from fogos_g-user 11 U1UG34.23-28-2 8dca85 release-keys
 
 # ACDB
 vendor/etc/acdbdata/nn_ns_models/candidate__2.7.1.31__3.0.0__eai_1.10_enpu1.pmd
@@ -149,6 +149,7 @@ vendor/etc/pwr/PowerFeatureConfig.xml
 vendor/etc/pwr/VideoPowerOptFeature.xml
 vendor/lib/libcamxexternalformatutils.so
 vendor/lib64/libC2D2.so
+vendor/lib64/libc2d_helper.so
 vendor/lib/libbitmlengine.so
 vendor/lib/libbitmlenginev2.so
 vendor/lib64/libhdr_impl.so
@@ -323,15 +324,12 @@ vendor/lib64/com.qti.feature2.serializer.so
 vendor/lib64/com.qti.feature2.swmf.so
 
 # Camera - Motorola
-vendor/bin/hw/motorola.hardware.camera.desktop@2.0-service
-vendor/etc/init/motorola.hardware.camera.desktop@2.0-service.rc
 vendor/etc/init/motorola.hardware.camera.imgtuner@2.0-service.rc
-vendor/lib64/motorola.hardware.camera.desktop@1.0.so
-vendor/lib/motorola.hardware.camera.desktop@1.0.so
-vendor/lib64/motorola.hardware.camera.desktop@2.0.so
 vendor/lib64/hw/motorola.hardware.camera.imgtuner@2.0-impl.so
 vendor/lib64/motorola.hardware.camera.imgtuner@1.0.so
 vendor/lib64/motorola.hardware.camera.imgtuner@2.0.so
+vendor/lib64/motorola.hardware.camera.desktop@1.0.so
+vendor/lib64/motorola.hardware.camera.desktop@2.0.so
 
 # Camera - sensor
 vendor/lib64/camera/com.qti.flash.aw36514.so
@@ -817,20 +815,7 @@ vendor/lib/libqcodec2_hooks.so
 vendor/lib/libqcodec2_platform.so
 vendor/lib/libqcodec2_utils.so
 vendor/lib/libqcodec2_v4l2codec.so
-vendor/lib64/libqcodec2_base.so
-vendor/lib64/libqcodec2_basecodec.so
-vendor/lib64/libqcodec2_core.so
-vendor/lib64/libqcodec2_hooks.so
-vendor/lib64/libqcodec2_mockfilter.so
-vendor/lib64/libqcodec2_platform.so
-vendor/lib64/libqcodec2_utils.so
-vendor/lib64/libqcodec2_v4l2codec.so
 vendor/lib64/libmmosal.so
-vendor/lib64/libcodec2_hidl@1.1.so
-vendor/lib64/libcodec2_soft_ac4dec.so
-vendor/lib64/libcodec2_soft_common.so
-vendor/lib64/libcodec2_soft_ddpdec.so
-vendor/lib64/libcodec2_store_dolby.so
 
 # Media - configs
 vendor/etc/media_codecs.xml
@@ -846,6 +831,20 @@ vendor/etc/media_profiles_V1_0.xml
 vendor/etc/media_profiles_blair.xml
 vendor/etc/media_profiles_holi.xml
 vendor/etc/media_profiles_vendor.xml
+
+# NFC
+vendor/etc/libnfc-PN557.conf
+vendor/etc/libnfc-SN220-UICC.conf
+vendor/etc/libnfc-SN220.conf
+vendor/etc/libnfc-mtp-SN100-UICC.conf
+vendor/etc/libnfc-mtp-SN100.conf
+vendor/etc/libnfc-mtp-SN100_38_4MHZ.conf
+vendor/etc/libnfc-nxp-pnscr.conf
+vendor/etc/libnfc-qrd-SN100.conf
+vendor/etc/libnfc-qrd-SN100_38_4MHZ.conf
+vendor/etc/libnfc-nci.conf
+vendor/etc/libnfc-sec-vendor.conf
+vendor/firmware/sec_s3nrn4v_firmware.bin
 
 # OEM
 vendor/bin/motobox
