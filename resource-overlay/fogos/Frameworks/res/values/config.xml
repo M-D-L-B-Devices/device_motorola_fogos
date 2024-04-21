@@ -25,16 +25,30 @@
 
          Must be overridden in platform specific overlays -->
     <array name="config_autoBrightnessLevels">
-        <item>2</item>
-        <item>4</item>
-        <item>5</item>
+        <item>3</item>
         <item>10</item>
-        <item>40</item>
-        <item>100</item>
-        <item>325</item>
-        <item>1250</item>
-        <item>3500</item>
-        <item>5500</item>
+        <item>20</item>
+        <item>50</item>
+        <item>70</item>
+        <item>85</item>
+        <item>110</item>
+        <item>130</item>
+        <item>150</item>
+        <item>180</item>
+        <item>180</item>
+        <item>180</item>
+        <item>180</item>
+        <item>210</item>
+        <item>210</item>
+        <item>210</item>
+        <item>220</item>
+        <item>225</item>
+        <item>225</item>
+        <item>350</item>
+        <item>400</item>
+        <item>400</item>
+        <item>400</item>
+        <item>400</item>
     </array>
 
     <!-- Array of desired screen brightness in nits corresponding to the lux values
@@ -51,17 +65,30 @@
          array. The brightness values must be non-negative and non-decreasing. This must be
          overridden in platform specific overlays -->
     <array name="config_autoBrightnessDisplayValuesNits">
-        <item>2</item>
-        <item>7</item>
+        <item>3</item>
         <item>10</item>
-        <item>12</item>
-        <item>24</item>
-        <item>95</item>
-        <item>111</item>
-        <item>149</item>
-        <item>192</item>
-        <item>252</item>
-        <item>500</item>
+        <item>20</item>
+        <item>50</item>
+        <item>70</item>
+        <item>85</item>
+        <item>110</item>
+        <item>130</item>
+        <item>150</item>
+        <item>180</item>
+        <item>180</item>
+        <item>180</item>
+        <item>180</item>
+        <item>210</item>
+        <item>210</item>
+        <item>210</item>
+        <item>220</item>
+        <item>225</item>
+        <item>225</item>
+        <item>350</item>
+        <item>400</item>
+        <item>400</item>
+        <item>400</item>
+        <item>400</item>
     </array>
 
     <!-- An array describing the screen's backlight values corresponding to the brightness
@@ -70,16 +97,20 @@
          This array should be equal in size to config_screenBrightnessBacklight. -->
     <array name="config_screenBrightnessBacklight">
         <item>0</item>
-        <item>1</item>
-        <item>4</item>
-        <item>5</item>
+        <item>2</item>
         <item>6</item>
-        <item>12</item>
-        <item>48</item>
-        <item>57</item>
-        <item>76</item>
-        <item>98</item>
-        <item>129</item>
+        <item>13</item>
+        <item>32</item>
+        <item>45</item>
+        <item>54</item>
+        <item>70</item>
+        <item>83</item>
+        <item>96</item>
+        <item>115</item>
+        <item>134</item>
+        <item>140</item>
+        <item>143</item>
+        <item>223</item>
         <item>255</item>
     </array>
 
@@ -92,17 +123,21 @@
          This array should be equal in size to config_screenBrightnessBacklight -->
     <array name="config_screenBrightnessNits">
         <item>0</item>
-        <item>2</item>
-        <item>7</item>
+        <item>3</item>
         <item>10</item>
-        <item>12</item>
-        <item>24</item>
-        <item>95</item>
-        <item>111</item>
-        <item>149</item>
-        <item>192</item>
-        <item>252</item>
-        <item>500</item>
+        <item>20</item>
+        <item>50</item>
+        <item>70</item>
+        <item>85</item>
+        <item>110</item>
+        <item>130</item>
+        <item>150</item>
+        <item>180</item>
+        <item>210</item>
+        <item>220</item>
+        <item>225</item>
+        <item>350</item>
+        <item>400</item>
     </array>
 
     <!-- Stability requirements in milliseconds for accepting a new brightness level.  This is used
@@ -134,13 +169,7 @@
 
          @see https://www.w3.org/TR/SVG/paths.html#PathData
          -->
-    <string translatable="false" name="config_mainBuiltInDisplayCutout">
-        M -35,0
-        L 35,0
-		L 35,105
-		L -35,105
-		Z
-	</string>
+    <string translatable="false" name="config_mainBuiltInDisplayCutout">M -28,0 L 28,0 L 28,77 L -28,77 Z</string>
 
 	<!-- Indicate whether to allow the device to suspend when the screen is off
          due to the proximity sensor.  This resource should only be set to true
@@ -148,6 +177,22 @@
          Otherwise, the device may fail to wake out of suspend reliably.
          The default is false. -->
     <bool name="config_suspendWhenScreenOffDueToProximity">true</bool>
+
+    <!-- The default refresh rate for a given device. Change this value to set a higher default
+         refresh rate. If the hardware composer on the device supports display modes with a higher
+         refresh rate than the default value specified here, the framework may use those higher
+         refresh rate modes if an app chooses one by setting preferredDisplayModeId or calling
+         setFrameRate().
+         If a non-zero value is set for config_defaultPeakRefreshRate, then
+         config_defaultRefreshRate may be set to 0, in which case the value set for
+         config_defaultPeakRefreshRate will act as the default frame rate. -->
+    <integer name="config_defaultRefreshRate">120</integer>
+
+    <!-- The default peak refresh rate for a given device. Change this value if you want to prevent
+         the framework from using higher refresh rates, even if display modes with higher refresh
+         rates are available from hardware composer. Only has an effect if the value is
+         non-zero. -->
+    <integer name="config_defaultPeakRefreshRate">120</integer>
 
     <!-- Power Management: Specifies whether to decouple the auto-suspend state of the
          device from the display on/off state.
@@ -241,9 +286,6 @@
     <!-- True if the device supports system navigation keys. -->
     <bool name="config_supportSystemNavigationKeys">true</bool>
 
-    <!-- Specify if the fingerprint hardware support gestures-->
-    <bool name="config_fingerprintSupportsGestures">true</bool>
-
     <!-- ComponentName of a dream to show whenever the system would otherwise have
          gone to sleep.  When the PowerManager is asked to go to sleep, it will instead
          try to start this dream if possible.  The dream should typically call startDozing()
@@ -264,7 +306,7 @@
     <bool name="config_dozeAlwaysOnEnabled">false</bool>
 
     <!-- MMS user agent string -->
-    <string name="config_mms_user_agent" translatable="false">motog345G</string>
+    <string name="config_mms_user_agent" translatable="false">motog345g</string>
     <!-- MMS user agent profile url -->
     <string name="config_mms_user_agent_profile_url" translatable="false">http://uaprof.motorola.com/phoneconfig/motov1/Profile/motov1.rdf</string>
 
