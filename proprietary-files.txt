@@ -1,4 +1,4 @@
-y# Unpinned blobs from fogos_g-user 11 U1UG34.23-28-2 8dca85 release-keys
+# Unpinned blobs from fogos_g-user 11 U1UG34.23-28-2 8dca85 release-keys
 
 # ACDB
 vendor/etc/acdbdata/nn_ns_models/candidate__2.7.1.31__3.0.0__eai_1.10_enpu1.pmd
@@ -842,8 +842,9 @@ vendor/etc/libnfc-mtp-SN100_38_4MHZ.conf
 vendor/etc/libnfc-nxp-pnscr.conf
 vendor/etc/libnfc-qrd-SN100.conf
 vendor/etc/libnfc-qrd-SN100_38_4MHZ.conf
-vendor/etc/libnfc-nci.conf
+vendor/etc/libnfc-sec-nci.conf
 vendor/etc/libnfc-sec-vendor.conf
+vendor/etc/nfc_calibration.txt
 vendor/firmware/sec_s3nrn4v_firmware.bin
 
 # OEM
