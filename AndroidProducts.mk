@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_fogos.mk
+    $(LOCAL_DIR)/statix_fogos.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_fogos-user \
-    lineage_fogos-userdebug \
-    lineage_fogos-eng
+    statix_fogos-user \
+    statix_fogos-userdebug \
+    statix_fogos-eng
