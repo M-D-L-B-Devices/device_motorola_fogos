@@ -1056,7 +1056,6 @@
         <name>vendor.qti.imsrtpservice</name>
         <version>3.0</version>
         <version>3.1</version>
-        <version>3.1</version>
         <interface>
             <name>IRTPService</name>
             <instance>imsrtpservice</instance>
