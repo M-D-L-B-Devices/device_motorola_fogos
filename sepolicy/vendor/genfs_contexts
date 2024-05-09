@@ -25,6 +25,9 @@ genfscon proc /hw                                                               
 genfscon proc /sys/kernel/sched_lib_name                                        u:object_r:proc_sched_lib_mask_cpuinfo:s0
 genfscon proc /sys/kernel/sched_lib_mask_force                                  u:object_r:proc_sched_lib_mask_cpuinfo:s0
 genfscon sysfs /devices/platform/soc/a94000.i2c/i2c-2/2-0049/double_click       u:object_r:vendor_sysfs_dt2w:s0
+#genfscon proc /sys/kernel/sched_energy_aware                         u:object_r:proc_sched:s0
+genfscon sysfs /devices/platform/soc/1d84000.ufshc/clkgate_enable    u:object_r:vendor_sysfs_scsi_host:s0
+
 
 # RTC
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pmk8350@0:rtc/rtc/rtc0 u:object_r:sysfs_rtc:s0
@@ -46,6 +49,8 @@ genfscon sysfs /devices/platform/soc/4a80000.spi/spi_master/spi0/spi0.0         
 genfscon sysfs /devices/platform/soc/984000.i2c/i2c-0/0-005a/leds/vibrator      u:object_r:sysfs_vibrator:s0
 genfscon sysfs /sys/devices/platform/soc/soc:ldo_vib/leds/vibrator(/.*)?        u:object_r:vendor_sysfs_vibrator:s0
 
+# Graphics
+genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-    u:object_r:vendor_sysfs_sde_crtc:s0
 
 # Wakeup
 genfscon sysfs /devices/platform/soc/984000.i2c/i2c-0/0-005a/wakeup/wakeup      u:object_r:sysfs_wakeup:s0
