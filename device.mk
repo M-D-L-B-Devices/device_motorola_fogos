@@ -48,7 +48,8 @@ PRODUCT_PACKAGES += \
     LineageSystemUIFogos \
     SettingsResFogos \
     SettingsProviderResFogos \
-    SystemUIResFogos
+    SystemUIResFogos \
+    EuiccOverlayFogos
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
@@ -511,6 +512,11 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
+
+# The default value of this variable is false and should only be set to true when
+# the device allows users to retain eSIM profiles after factory reset of user data.
+PRODUCT_PRODUCT_PROPERTIES += \
+    masterclear.allow_retain_esim_profiles_after_fdr=true
 
 # Inherit from vendor blobs
 $(call inherit-product, vendor/motorola/fogos/fogos-vendor.mk)
