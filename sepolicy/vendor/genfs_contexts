@@ -8,6 +8,7 @@ genfscon sysfs /devices/platform/soc/soc:mmi,charger/power_supply/mmi_battery   
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5-mmi/power_supply/battery u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5-mmi/power_supply/battery/capacity u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/soc:mmi,discrete-charging/power_supply/battery          u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5-mmi/iio:device6/name   u:object_r:vendor_sysfs_battery_supply:s0
 
 # Input Devices
 genfscon sysfs /devices/virtual/input                                           u:object_r:vendor_sysfs_input:s0
@@ -47,7 +48,8 @@ genfscon sysfs /devices/platform/soc/4a80000.spi/spi_master/spi0/spi0.0         
 
 # Vibrator
 genfscon sysfs /devices/platform/soc/984000.i2c/i2c-0/0-005a/leds/vibrator      u:object_r:sysfs_vibrator:s0
-/sys/devices/platform/soc/soc:ldo_vib/leds/vibrator(/.*)?                                 u:object_r:vendor_sysfs_vibrator:s0
+genfscon sysfs /sys/devices/platform/soc/soc:ldo_vib/leds/vibrator(/.*)?        u:object_r:vendor_sysfs_vibrator:s0
+
 
 # Wakeup
 genfscon sysfs /devices/platform/soc/984000.i2c/i2c-0/0-005a/wakeup/wakeup      u:object_r:sysfs_wakeup:s0
