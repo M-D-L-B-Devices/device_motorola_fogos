@@ -16,10 +16,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 # Inherit virtual_ab_ota product
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
-# Boot animation
-TARGET_SCREEN_HEIGHT := 2400
-TARGET_SCREEN_WIDTH := 1080
-
 # Screen
 TARGET_SCREEN_DENSITY := 280
 
@@ -51,8 +47,7 @@ PRODUCT_PACKAGES += \
     FrameworksResFogos \
     LineageSystemUIFogos \
     SettingsProviderResFogos \
-    SystemUIResFogos \
-    EuiccOverlayFogos
+    SystemUIResFogos
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \

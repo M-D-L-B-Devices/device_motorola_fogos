@@ -1561,11 +1561,6 @@ vendor/lib/libwfdutils_proprietary.so
 vendor/lib/vendor.qti.hardware.wifidisplaysession@1.0.so
 vendor/lib/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
 
-# EUICC
-product/priv-app/EuiccGoogle/EuiccGoogle.apk
-product/etc/permissions/android.hardware.telephony.euicc.xml
-product/etc/permissions/privapp-permissions-com.google.android.euicc.xml
-
 # Ril - Corfur
 vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.7.so
 vendor/lib64/vendor.qti.ims.configservice@1.0.so
