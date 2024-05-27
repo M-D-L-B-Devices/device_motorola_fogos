@@ -218,6 +218,8 @@ ro.surface_flinger.set_touch_timer_ms=1000
 ro.surface_flinger.use_smart_90_for_video=true
 vendor.display.disable_dynamic_sf_idle=1
 vendor.display.idle_time=0
+debug.hwui.use_hint_manager=true
+debug.hwui.target_cpu_time_percent=30
 
 # IMS
 persist.vendor.ims.cam_sensor_delay=20
