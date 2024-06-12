@@ -39,6 +39,7 @@ PRODUCT_PACKAGES += \
     SystemUIResCommon_Sys \
     TelecommResCommon_Sys \
     TelephonyResCommon_Sys \
+    DeviceAsWebcamResQcom \
     WifiResCommon_Sys \
     FrameworksResTarget \
     WifiResTarget
