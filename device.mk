@@ -21,7 +21,7 @@ TARGET_SCREEN_DENSITY := 280
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := 420dpi
+PRODUCT_AAPT_PREF_CONFIG := 280dpi
 PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
 PRODUCT_SHIPPING_API_LEVEL := 30
@@ -155,6 +155,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64 \
+    libpng.vendor \
     libcamera2ndk_vendor \
     libgui_vendor \
     libgui_shim_vendor \
@@ -318,7 +319,8 @@ PRODUCT_PACKAGES += \
     libOmxG711Enc \
     libOmxQcelp13Enc \
     libstagefrighthw \
-    libstagefright_softomx.vendor
+    libstagefright_softomx.vendor \
+    libstagefright_softomx_plugin.vendor
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
@@ -381,6 +383,8 @@ PRODUCT_COPY_FILES += \
 # QMI
 PRODUCT_PACKAGES += \
     libjson \
+    libjsoncpp.vendor \
+    libcurl.vendor \
     libqti_vndfwk_detect \
     libqti_vndfwk_detect.vendor \
     libvndfwk_detect_jni.qti \
@@ -403,6 +407,10 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
     libprotobuf-cpp-full-3.9.1-vendorcompat \
     libprotobuf-cpp-lite-3.9.1-vendorcompat \
+    libxml2 \
+    libion.vendor \
+    libnetutils.vendor \
+    libsysutils.vendor \
     librmnetctl
 
 # Sensors
@@ -416,6 +424,18 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/google/interfaces \
     hardware/google/pixel
+
+# SQLite
+PRODUCT_PACKAGES += \
+    libsqlite.vendor
+
+# Disable debug info gen
+PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
+PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
+USE_DEX2OAT_DEBUG := false
+WITH_DEXPREOPT_DEBUG_INFO := false
+PRODUCT_SYSTEM_SERVER_DEBUG_INFO := false
+PRODUCT_OTHER_JAVA_DEBUG_INFO := false
 
 # Telephony
 PRODUCT_PACKAGES += \
