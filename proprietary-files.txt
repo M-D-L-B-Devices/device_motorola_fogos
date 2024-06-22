@@ -1,4 +1,4 @@
-# Unpinned blobs from fogos_g-user 11 U1UG34.23-28-2 8dca85 release-keys
+# Unpinned blobs from fogos_g-user 11 U1UG34.23-82-2 2a8311 release-keys
 
 # ACDB
 vendor/etc/acdbdata/nn_ns_models/candidate__2.7.1.31__3.0.0__eai_1.10_enpu1.pmd
