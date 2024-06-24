@@ -98,12 +98,15 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0 \
     android.hardware.bluetooth@1.0.vendor \
     android.hardware.bluetooth.audio-impl \
+    android.hardware.bluetooth.a2dp@1.0-impl \
+    android.hardware.bluetooth.a2dp@1.0-service \
     android.hardware.soundtrigger@2.3-impl \
     audioadsprpcd \
     audio.bluetooth.default \
     audio.primary.holi \
     audio.r_submix.default \
     audio.usb.default \
+    liba2dpoffload \
     libaudiopreprocessing \
     libbundlewrapper \
     libdownmix \
@@ -228,9 +231,9 @@ PRODUCT_PACKAGES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-impl.recovery \
-    android.hardware.health@2.1-service
+    android.hardware.health-service.qti \
+    android.hardware.health-service.qti_recovery \
+    android.hardware.health@2.1.vendor
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -448,7 +451,7 @@ PRODUCT_COPY_FILES += \
 
 # Thermal
 PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0-service.qti \
+    android.hardware.thermal@2.0-service.mock \
     android.hardware.thermal@2.0 \
     android.hardware.thermal@2.0.vendor
 
