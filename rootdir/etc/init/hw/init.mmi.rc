@@ -324,7 +324,7 @@ on late-fs-charger
     # Boot time fs tune
     write /sys/block/dm-9/queue/read_ahead_kb 2048
 
-on charger
+on property:init.svc.vendor.charger=running
     trigger early-fs
     trigger fs
     trigger post-fs
@@ -405,12 +405,6 @@ on property:vendor.hw.touch.status="ready"
 
 on property:ro.boot.revision=*
     setprop ro.boot.hardware.revision ${ro.boot.revision}
-
-service vendor.charge_only_mode /vendor/bin/charge_only_mode
-    user root
-    group graphics system input
-    capabilities SYS_BOOT
-    disabled
 
 # bugreport is triggered by holding down volume down, volume up and power
 service bugreport /system/bin/dumpstate -d -p -B -z \

@@ -61,6 +61,9 @@ function blob_fixup() {
         system_ext/etc/permissions/moto-telephony.xml)
             sed -i "s#/system/#/system_ext/#" "${2}"
             ;;
+        vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc)
+            sed -i "s/on charger/on property:init.svc.vendor.charger=running/g" "${2}"
+            ;;
         vendor/etc/vintf/manifest/vendor.dolby.media.c2@1.0-service.xml)
             sed -ni '/default1/!p' "${2}"
             ;;
