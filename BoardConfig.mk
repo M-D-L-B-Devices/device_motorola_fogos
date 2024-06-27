@@ -144,7 +144,8 @@ DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/framework_manifest.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(DEVICE_PATH)/device_framework_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
-    vendor/lmodroid/config/device_framework_matrix.xml
+    vendor/derp/config/device_framework_matrix.xml
+
 DEVICE_MATRIX_FILE := \
    $(DEVICE_PATH)/compatibility_matrix.xml \
    hardware/qcom-caf/common/compatibility_matrix.xml
@@ -154,7 +155,7 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 BOARD_USES_METADATA_PARTITION := true
 
 # Partitions
--include vendor/lmodroid/config/BoardConfigReservedSize.mk
+#-include vendor/lmodroid/config/BoardConfigReservedSize.mk
 BOARD_VENDORIMAGE_PARTITION_RESERVED_SIZE := 30720000
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
 BOARD_DTBOIMG_PARTITION_SIZE := 25165824
