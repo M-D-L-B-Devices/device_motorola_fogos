@@ -56,7 +56,7 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 #BOARD_RAMDISK_USE_LZ4 := true
 TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/dtc/dtc LLVM=-11 CONFIG_BUILD_ARM64_DT_OVERLAY=y
 TARGET_KERNEL_SOURCE := kernel/motorola/fogos
-TARGET_KERNEL_CONFIG := vendor/fogos_defconfig
+TARGET_KERNEL_CONFIG := vendor/fogos-qgki-inline_defconfig
 
 TARGET_KERNEL_CLANG_COMPILE := true
 
@@ -153,7 +153,7 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 BOARD_USES_METADATA_PARTITION := true
 
 # Partitions
-#-include vendor/lmodroid/config/BoardConfigReservedSize.mk
+-include vendor/lineage/config/BoardConfigReservedSize.mk
 BOARD_VENDORIMAGE_PARTITION_RESERVED_SIZE := 30720000
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
 BOARD_DTBOIMG_PARTITION_SIZE := 25165824
