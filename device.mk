@@ -163,9 +163,6 @@ PRODUCT_PACKAGES += \
     libgui_shim_vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
-# Charger
-WITH_LINEAGE_CHARGER := false
-
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
