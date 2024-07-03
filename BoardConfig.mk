@@ -116,6 +116,7 @@ TARGET_USES_GRALLOC1 := true
 TARGET_USES_GRALLOC4 := true
 TARGET_USES_HWC2 := true
 TARGET_USES_ION := true
+$(call soong_config_set, qtidisplay, use_ycrcb_camera_encode, true)
 
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
