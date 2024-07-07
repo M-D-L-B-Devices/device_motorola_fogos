@@ -56,7 +56,7 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 #BOARD_RAMDISK_USE_LZ4 := true
 TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/dtc/dtc LLVM=-11 CONFIG_BUILD_ARM64_DT_OVERLAY=y
 TARGET_KERNEL_SOURCE := kernel/motorola/fogos
-TARGET_KERNEL_CONFIG := vendor/fogos_defconfig
+TARGET_KERNEL_CONFIG := vendor/fogos_defconfig vendor/grass.config
 
 TARGET_KERNEL_CLANG_COMPILE := true
 
