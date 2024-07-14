@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/derp_fogos.mk
+    $(LOCAL_DIR)/lmodroid_fogos.mk
 
 COMMON_LUNCH_CHOICES := \
-    derp_fogos-user \
-    derp_fogos-userdebug \
-    derp_fogos-eng
+    lmodroid_fogos-user \
+    lmodroid_fogos-userdebug \
+    lmodroid_fogos-eng

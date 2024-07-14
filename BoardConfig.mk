@@ -56,24 +56,10 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 #BOARD_RAMDISK_USE_LZ4 := true
 TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/dtc/dtc LLVM=-11 CONFIG_BUILD_ARM64_DT_OVERLAY=y
 TARGET_KERNEL_SOURCE := kernel/motorola/fogos
-TARGET_KERNEL_CONFIG := vendor/fogos_defconfig
-
+TARGET_KERNEL_CONFIG := vendor/fogos-qgki-inline_defconfig
 TARGET_KERNEL_CLANG_COMPILE := true
-
 TARGET_KERNEL_CLANG_VERSION := r383902b1
-
-#BOARD_KERNEL_BINARIES := kernel
-#BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img
-#TARGET_FORCE_PREBUILT_KERNEL := true
 INLINE_KERNEL_BUILDING := true
-#TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)-kernel/kernel
-#TARGET_KERNEL_CONFIG := holi_QGKI
-#TARGET_PREBUILT_DTB := $(DEVICE_PATH)-kernel/dtb.img
-#PRODUCT_COPY_FILES += \
-#    $(DEVICE_PATH)-kernel/dtb.img:$(TARGET_COPY_OUT)/dtb.img \
-#    $(DEVICE_PATH)-kernel/kernel:kernel \
-#    $(call find-copy-subdir-files,*,$(DEVICE_PATH)-kernel/ramdisk-modules/,$(TARGET_COPY_OUT_VENDOR_RAMDISK)/lib/modules) \
-$    $(call find-copy-subdir-files,*,$(DEVICE_PATH)-kernel/vendor-modules/,$(TARGET_COPY_OUT_VENDOR)/lib/modules)
 
 # Kernel Modules
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))
@@ -142,7 +128,7 @@ DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/framework_manifest.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(DEVICE_PATH)/device_framework_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
-    vendor/derp/config/device_framework_matrix.xml
+    vendor/lmodroid/config/device_framework_matrix.xml
 
 DEVICE_MATRIX_FILE := \
    $(DEVICE_PATH)/compatibility_matrix.xml \
