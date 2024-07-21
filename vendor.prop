@@ -298,7 +298,15 @@ ro.vendor.radio.imei.sv=14
 persist.vendor.sensors.allow_non_default_discovery=true
 persist.vendor.sensors.on_change_sample_period=true
 persist.vendor.sensors.sync_request=true
+persist.vendor.sensors.debug.ssc_qmi_debug=true
+persist.vendor.sensors.hal_trigger_ssr=false
+persist.vendor.sensors.enable.rt_task=false
+persist.vendor.sensors.support_direct_channel=false
+persist.vendor.sensors.enable.bypass_worker=true
 ro.vendor.sensors.glance_approach=false
+persist.vendor.sensors.mot_tap=true
+ro.vendor.sensors.prox_for_call=true
+ro.vendor.sensors.mot_ltv=true
 
 # Shutdown
 sys.vendor.shutdown.waittime=500
