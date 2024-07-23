@@ -21,3 +21,6 @@ PRODUCT_BRAND := motorola
 PRODUCT_MODEL := moto g34 5G
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
+
+# Gapps
+TARGET_USES_PICO_GAPPS := true
