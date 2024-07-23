@@ -16,6 +16,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 # Inherit virtual_ab_ota product
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1200
+TARGET_SCREEN_WIDTH := 720
+
 # Screen
 TARGET_SCREEN_DENSITY := 280
 
