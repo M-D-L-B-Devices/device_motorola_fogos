@@ -50,6 +50,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FrameworksResFogos \
     LineageSystemUIFogos \
+    SettingsResFogos \
     SettingsProviderResFogos \
     SystemUIResFogos
 
