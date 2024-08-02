@@ -324,7 +324,7 @@ on late-fs-charger
     # Boot time fs tune
     write /sys/block/dm-9/queue/read_ahead_kb 2048
 
-on property:init.svc.vendor.charger=running
+on charger
     trigger early-fs
     trigger fs
     trigger post-fs

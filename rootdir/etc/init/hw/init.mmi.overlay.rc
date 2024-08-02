@@ -114,7 +114,7 @@ on early-boot
     chown system camera /dev/cci_intf
     chmod 0660 /dev/cci_intf
 
-on property:init.svc.vendor.charger=running
+on charger
     insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/qpnp_adaptive_charge.ko
     insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/mmi-smbcharger-iio.ko
 
