@@ -40,6 +40,7 @@ PRODUCT_PACKAGES += \
     WifiResTarget
 
 PRODUCT_PACKAGES += \
+    EuiccOverlayFogos \
     FrameworksResFogos \
     LineageSystemUIFogos \
     SettingsResFogos \

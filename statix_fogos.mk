@@ -17,7 +17,6 @@ $(call inherit-product, vendor/statix/config/gsm.mk)
 
 # StatiX Flags
 ENABLE_GAMETOOLS := true
-INCLUDE_PIXEL_LAUNCHER := true
 TARGET_USES_BLUR := true
 
 PRODUCT_NAME := statix_fogos
