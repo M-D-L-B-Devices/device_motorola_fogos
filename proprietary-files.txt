@@ -369,7 +369,7 @@ vendor/bin/init.qti.chg_policy.sh
 vendor/etc/charger_fstab.qti
 vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
 
-# CNE - From Corfur
+# CNE
 -vendor/app/CneApp/CneApp.apk
 vendor/bin/cnd
 vendor/etc/cne/mwqem.conf
@@ -966,7 +966,7 @@ system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2.so
 vendor/lib/vendor.qti.hardware.qccsyshal@1.0.so
 vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
 
-# QMI - From Corfur
+# QMI
 system/etc/permissions/privapp-permissions-qti.xml
 system/etc/sysconfig/qti_whitelist.xml
 vendor/bin/irsc_util
@@ -1010,12 +1010,14 @@ vendor/lib64/libqmi_legacy.so
 vendor/lib64/libqmiservices.so
 vendor/lib64/libsubsystem_control.so
 
-# RIL - From Corfur
+# RIL
 -product/app/uimgbaservice/uimgbaservice.apk
 product/etc/permissions/UimGba.xml
 product/etc/permissions/UimGbaManager.xml
+product/etc/permissions/UimService.xml
 product/framework/uimgbalibrary.jar
 product/framework/uimgbamanagerlibrary.jar
+product/framework/uimservicelibrary.jar
 -system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 system_ext/etc/permissions/qcrilhook.xml
 system_ext/etc/permissions/qti_libpermissions.xml
@@ -1036,7 +1038,10 @@ vendor/bin/qrtr-cfg
 vendor/bin/qrtr-lookup
 vendor/bin/qrtr-ns
 vendor/bin/qti
+vendor/bin/qtigetprop
+vendor/bin/qtisetprop
 vendor/bin/rmt_storage
+vendor/bin/shsusrd
 vendor/bin/tftp_server
 vendor/etc/data/dsi_config.xml
 vendor/etc/data/netmgr_config.xml
@@ -1047,11 +1052,14 @@ vendor/etc/init/ipa_fws.rc
 vendor/etc/init/netmgrd.rc
 vendor/etc/init/port-bridge.rc
 vendor/etc/init/qcrilNrd.rc
+vendor/etc/init/shsusrd.rc
 vendor/etc/init/vendor.qti.rmt_storage.rc
 vendor/etc/init/vendor.qti.tftp.rc
 vendor/etc/qcril_database/qcrilNr.db
 vendor/etc/qcril_database/upgrade/config/10.0_config.sql
 vendor/etc/qcril_database/upgrade/config/11.0_config.sql
+vendor/etc/qcril_database/upgrade/config/12.0_config.sql
+vendor/etc/qcril_database/upgrade/config/13.0_config.sql
 vendor/etc/qcril_database/upgrade/config/6.0_config.sql
 vendor/etc/qcril_database/upgrade/config/9.0_config.sql
 vendor/etc/qcril_database/upgrade/ecc/0_initial.sql
@@ -1085,6 +1093,10 @@ vendor/etc/qcril_database/upgrade/ecc/37_version_qcrildb.sql
 vendor/etc/qcril_database/upgrade/ecc/38_version_qcrildb.sql
 vendor/etc/qcril_database/upgrade/ecc/39_version_qcrildb.sql
 vendor/etc/qcril_database/upgrade/ecc/3_version_qcrildb.sql
+vendor/etc/qcril_database/upgrade/ecc/40_version_qcrildb.sql
+vendor/etc/qcril_database/upgrade/ecc/41_version_qcrildb.sql
+vendor/etc/qcril_database/upgrade/ecc/42_version_qcrildb.sql
+vendor/etc/qcril_database/upgrade/ecc/43_version_qcrildb.sql
 vendor/etc/qcril_database/upgrade/ecc/4_version_qcrildb.sql
 vendor/etc/qcril_database/upgrade/ecc/5_version_qcrildb.sql
 vendor/etc/qcril_database/upgrade/ecc/6_version_qcrildb.sql
@@ -1150,6 +1162,7 @@ vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.3.so
 vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.4.so
 vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.5.so
 vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.6.so
+vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.7.so
 vendor/lib64/vendor.qti.hardware.radio.uim@1.0.so
 vendor/lib64/vendor.qti.hardware.radio.uim@1.1.so
 vendor/lib64/vendor.qti.hardware.radio.uim@1.2.so
@@ -1158,21 +1171,30 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 
-# Ril - IMS (APK) - From Corfur
+# Ril - IMS (APK)
 system/etc/permissions/moto-telephony.xml:system_ext/etc/permissions/moto-telephony.xml
 system/framework/moto-telephony.jar:system_ext/framework/moto-telephony.jar
 
 # Radio - IMS (APK) - from bangkk patched
-system_ext/lib64/libimsmedia_jni.so|5b34af19636863d22e5e7b4f20136564e6ee2222
 -system_ext/priv-app/ims/ims.apk|25e2143c555eefa20eecde03b44ae81cd0eaed9b
+system_ext/lib64/libimsmedia_jni.so|5b34af19636863d22e5e7b4f20136564e6ee2222
 
-# RIL - IMS - From Corfur
+# RIL - IMS
 -system_ext/app/ImsRcsService/ImsRcsService.apk
 system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml
+system_ext/framework/vendor.qti.ims.configservice-V1.0-java.jar
+system_ext/framework/vendor.qti.ims.configservice-V1.1-java.jar
 system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar
+system_ext/framework/vendor.qti.ims.factory-V1.1-java.jar
 system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar
+system_ext/framework/vendor.qti.ims.factory-V2.1-java.jar
+system_ext/framework/vendor.qti.ims.factory-V2.2-java.jar
 system_ext/framework/vendor.qti.ims.rcssip-V1.0-java.jar
+system_ext/framework/vendor.qti.ims.rcssip-V1.1-java.jar
+system_ext/framework/vendor.qti.ims.rcssip-V1.2-java.jar
 system_ext/framework/vendor.qti.ims.rcsuce-V1.0-java.jar
+system_ext/framework/vendor.qti.ims.rcsuce-V1.1-java.jar
+system_ext/framework/vendor.qti.ims.rcsuce-V1.2-java.jar
 system_ext/lib64/lib-imsvideocodec.so
 system_ext/lib64/lib-imsvt.so
 system_ext/lib64/lib-imsvtextutils.so
@@ -1180,6 +1202,8 @@ system_ext/lib64/lib-imsvtutils.so
 system_ext/lib64/libdiag_system.so
 system_ext/lib64/libimscamera_jni.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
+system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
+system_ext/lib64/vendor.qti.ImsRtpService-V1-ndk.so
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdaemon
 vendor/etc/init/ims_rtp_daemon.rc
@@ -1212,14 +1236,28 @@ vendor/lib64/vendor.qti.hardware.radio.ims@1.4.so
 vendor/lib64/vendor.qti.hardware.radio.ims@1.5.so
 vendor/lib64/vendor.qti.hardware.radio.ims@1.6.so
 vendor/lib64/vendor.qti.hardware.radio.ims@1.7.so
+vendor/lib64/vendor.qti.hardware.radio.ims@1.8.so
+vendor/lib64/vendor.qti.hardware.radio.ims@1.9.so
 vendor/lib64/vendor.qti.ims.callcapability@1.0.so
 vendor/lib64/vendor.qti.ims.callinfo@1.0.so
+vendor/lib64/vendor.qti.ims.configservice@1.0.so
+vendor/lib64/vendor.qti.ims.configservice@1.1.so
+vendor/lib64/vendor.qti.ims.connection@1.0.so
 vendor/lib64/vendor.qti.ims.factory@1.0.so
 vendor/lib64/vendor.qti.ims.factory@1.1.so
+vendor/lib64/vendor.qti.ims.factory@2.0.so
+vendor/lib64/vendor.qti.ims.factory@2.1.so
+vendor/lib64/vendor.qti.ims.factory@2.2.so
 vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so
 vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so
 vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so
 vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so
+vendor/lib64/vendor.qti.ims.rcssip@1.0.so
+vendor/lib64/vendor.qti.ims.rcssip@1.1.so
+vendor/lib64/vendor.qti.ims.rcssip@1.2.so
+vendor/lib64/vendor.qti.ims.rcsuce@1.0.so
+vendor/lib64/vendor.qti.ims.rcsuce@1.1.so
+vendor/lib64/vendor.qti.ims.rcsuce@1.2.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so
 
@@ -1606,18 +1644,3 @@ vendor/lib/libwfduibcsrcinterface_proprietary.so
 vendor/lib/libwfdutils_proprietary.so
 vendor/lib/vendor.qti.hardware.wifidisplaysession@1.0.so
 vendor/lib/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
-
-# Ril - Corfur
-vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.7.so
-vendor/lib64/vendor.qti.ims.configservice@1.0.so
-vendor/lib64/vendor.qti.ims.configservice@1.1.so
-vendor/lib64/vendor.qti.ims.connection@1.0.so
-vendor/lib64/vendor.qti.ims.factory@2.0.so
-vendor/lib64/vendor.qti.ims.factory@2.1.so
-vendor/lib64/vendor.qti.ims.factory@2.2.so
-vendor/lib64/vendor.qti.ims.rcssip@1.0.so
-vendor/lib64/vendor.qti.ims.rcssip@1.1.so
-vendor/lib64/vendor.qti.ims.rcssip@1.2.so
-vendor/lib64/vendor.qti.ims.rcsuce@1.0.so
-vendor/lib64/vendor.qti.ims.rcsuce@1.1.so
-vendor/lib64/vendor.qti.ims.rcsuce@1.2.so
