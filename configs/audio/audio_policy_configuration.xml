@@ -36,7 +36,6 @@
                 <item>Built-In Mic</item>
                 <item>Built-In Back Mic</item>
                 <item>Telephony Rx</item>
-                <item>FM tuner</item>
             </attachedDevices>
             <defaultOutputDevice>Speaker</defaultOutputDevice>
             <mixPorts>
@@ -152,8 +151,6 @@
                 </devicePort>
                 <devicePort tagName="Telephony Rx" type="AUDIO_DEVICE_IN_TELEPHONY_RX" role="source">
                 </devicePort>
-                <devicePort tagName="FM tuner" type="AUDIO_DEVICE_IN_FM_TUNER" role="source">
-                </devicePort>
                 <devicePort tagName="USB Device In" type="AUDIO_DEVICE_IN_USB_DEVICE" role="source">
                 </devicePort>
                 <devicePort tagName="USB Headset In" type="AUDIO_DEVICE_IN_USB_HEADSET" role="source">
@@ -197,8 +194,6 @@
                        sources="Built-In Mic,Built-In Back Mic,Wired Headset Mic,BT SCO Headset Mic,USB Device In,USB Headset In"/>
                 <route type="mix" sink="scc input"
                        sources="Built-In Mic,Wired Headset Mic"/>
-                <route type="mix" sink="fm input"
-                       sources="FM tuner"/>
                 <route type="mix" sink="hifi_input" sources="USB Device In,USB Headset In" />
             </routes>
         </module>
@@ -225,3 +220,4 @@
 
     <!-- End of Volume section -->
 </audioPolicyConfiguration>
+
