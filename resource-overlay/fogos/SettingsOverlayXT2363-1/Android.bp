@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "SettingsOverlayXT2363-1",
+    product_specific: true,
+}

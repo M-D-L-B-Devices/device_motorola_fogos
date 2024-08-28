@@ -45,6 +45,10 @@ PRODUCT_PACKAGES += \
     LineageSystemUIFogos \
     SettingsResFogos \
     SettingsProviderResFogos \
+    SettingsOverlayXT2363-1 \
+    SettingsOverlayXT2363-2 \
+    SettingsOverlayXT2363-3 \
+    SettingsOverlayXT2363-5 \
     SystemUIResFogos
 
 # A/B
