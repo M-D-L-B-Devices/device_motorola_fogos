@@ -13,7 +13,6 @@ on post-fs
     chown system system /sys/devices/platform/soc/4804000.ufshc/devfreq/4804000.ufshc/min_freq
 
 on post-fs-data
-
     chown system system /sys/devices/platform/soc/soc:fm_wcn39x0/elna_en
     # touch api
     chown system system /sys/class/touchscreen/primary/interpolation
@@ -24,24 +23,6 @@ on post-fs-data
     chmod 0660 /sys/class/touchscreen/primary/edge
     # change permission for stylus
     chown system system /sys/class/touchscreen/primary/palm_settings
-
-    # Change ownership and permission for bq25960-standalone factory testing
-    chown system system /sys/class/power_supply/bq25960-standalone/voltage_now
-    chown system system /sys/bus/iio/devices/iio:device6/in_index_bq25980_cp_enabled_input
-    chmod 0644 /sys/class/power_supply/bq25960-standalone/voltage_now
-    chmod 0664 /sys/bus/iio/devices/iio:device6/in_index_bq25980_cp_enabled_input
-
-    # Add for Egis Fod fingerprint
-    mkdir /data/vendor/egis 0770 system system
-    mkdir /mnt/vendor/persist/egis 0770 system system
-    mkdir /data/vendor/tzstorage/egis 0770 system system
-    mkdir /data/vendor/egis/cqa  0770 system system
-
-    # Add for after-sale ois gyro cal
-    mkdir /mnt/vendor/persist/camera/gyro_compat 0770 vendor_tcmd camera
-
-    # Add for OIS hall test result
-    mkdir /mnt/vendor/persist/camera/ois_hall 0770 vendor_tcmd camera
 
     # Add for fod fps calibration
     chown system system /sys/class/backlight/panel0-backlight/brightness
@@ -141,18 +122,3 @@ on property:sys.boot_completed=1
 on init
     insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/chipone_tddi_v2_mmi.ko
     insmod /vendor/lib/modules/${ro.vendor.mot.gki.path}/ilitek_v3_mmi.ko
-
-on property:dev.bootcomplete=1 && property:ro.vendor.hw.ram=4GB
-    write /sys/block/dm-0/queue/read_ahead_kb 128
-    write /sys/block/dm-1/queue/read_ahead_kb 128
-    write /sys/block/dm-2/queue/read_ahead_kb 128
-    write /sys/block/dm-3/queue/read_ahead_kb 128
-    write /sys/block/dm-4/queue/read_ahead_kb 128
-    write /sys/block/dm-5/queue/read_ahead_kb 128
-    write /sys/block/${dev.mnt.dev.root}/queue/read_ahead_kb 128
-    write /sys/block/${dev.mnt.dev.system_ext}/queue/read_ahead_kb 128
-    write /sys/block/${dev.mnt.dev.product}/queue/read_ahead_kb 128
-    write /sys/block/${dev.mnt.dev.vendor}/queue/read_ahead_kb 128
-    write /sys/block/${dev.mnt.dev.data}/queue/read_ahead_kb 128
-    write /sys/block/${dev.mnt.rootdisk.data}/queue/read_ahead_kb 128
-
