@@ -20,7 +20,6 @@ ANDROID_ROOT="${MY_DIR}/../../.."
 HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
     echo "Unable to find helper script at ${HELPER}"
-    exit 1
 fi
 source "${HELPER}"
 
@@ -66,6 +65,9 @@ function blob_fixup() {
             ;;
         vendor/lib/libmot_chi_desktop_helper.so | vendor/lib64/libmot_chi_desktop_helper.so)
             grep -q "libgui_shim_vendor.so" "${2}" || "${PATCHELF}" --add-needed "libgui_shim_vendor.so" "${2}"
+            ;;
+        vendor/lib64/libwvhidl.so)
+        "${PATCHELF}" --replace-needed "libcrypto.so" "libcrypto-v33.so" "${2}"
             ;;
         vendor/etc/qcril_database/qcrilNr.db|\
         vendor/etc/qcril_database/upgrade/config/*)
